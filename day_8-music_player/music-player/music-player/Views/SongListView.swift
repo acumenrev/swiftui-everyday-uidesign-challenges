@@ -22,6 +22,8 @@ struct SongListView: View {
                 .navigationTitle("Library")
                 .sheet(isPresented: $isPopoverPresented, content: {
                     MusicPlayerView()
+                        .presentationDetents([.medium, .large])
+                        .presentationCornerRadius(25)
                 })
         })
     }
